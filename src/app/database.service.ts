@@ -35,6 +35,11 @@ export class DatabaseService {
     let url = "/actors/" + id;
     return this.http.delete(url, httpOptions);
   }
+  
+  deleteAllActors() {
+    let url = "/actors";
+    return this.http.delete(url, httpOptions);
+  }
 
   getMovies() {
     return this.http.get('/movies');

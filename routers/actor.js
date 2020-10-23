@@ -53,6 +53,14 @@ module.exports = {
             res.json();
         });
     },
+    
+    deleteAll: function (req, res) {
+        Actor.deleteMany({}, function (err) {
+            if (err) return res.status(400).json(err);
+
+            res.json();
+        });
+    },
 
 
     addMovie: function (req, res) {

@@ -14,6 +14,8 @@ import { AddmovieComponent } from './addmovie/addmovie.component';
 import { DeletemovieComponent } from './deletemovie/deletemovie.component';
 import { ListmoviesComponent } from './listmovies/listmovies.component';
 import { Actor2movieComponent } from './actor2movie/actor2movie.component';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const appRoutes: Routes = [
   { path: "listactors", component: ListactorsComponent },
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
   { path: "addmovie", component: AddmovieComponent },
   { path: "deletemovie", component: DeletemovieComponent },
   { path: "actor2movie", component: Actor2movieComponent },
+  { path: "authentication", component: AuthenticateComponent },
   { path: "", redirectTo: "/listactors", pathMatch: "full" },
+  { path: "**", component: PagenotfoundComponent }
 ];
 
 @NgModule({
@@ -38,6 +42,7 @@ const appRoutes: Routes = [
     DeletemovieComponent,
     ListmoviesComponent,
     Actor2movieComponent,
+    AuthenticateComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {useHash: true}),

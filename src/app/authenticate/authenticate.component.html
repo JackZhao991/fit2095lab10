@@ -1,0 +1,8 @@
+<div class="section">
+    <div class="form-group">
+        <label for="pin">Pin</label>
+        <input type="text" class="form-control" id="pin" [(ngModel)]="pin">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="authenticate()">Verify</button>
+    <button type="submit" class="btn btn-primary" (click)="onDeleteAllActors()" *ngIf="verified===true">Delete</button>
+</div>
