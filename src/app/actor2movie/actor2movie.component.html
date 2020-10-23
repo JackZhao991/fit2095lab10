@@ -1,0 +1,43 @@
+<div class="section">
+    <div>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Birth Year</th>
+                    <th>Select</th>
+                </tr>
+                <tr *ngFor="let item of actorsDB">
+                    <td>{{item.name}}</td>
+                    <td>{{item.bYear}}</td>
+                    <td>
+                        <div>
+                            <input type="checkbox" (change)="onSelectActor(item)">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Select</th>
+                </tr>
+                <tr *ngFor="let item of moviesDB">
+                    <td>{{item.title}}</td>
+                    <td>{{item.year}}</td>
+                    <td>
+                        <div>
+                            <input type="checkbox" (change)="onSelectMovie(item)">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onAddActor()">Add Actor</button>
+</div>
